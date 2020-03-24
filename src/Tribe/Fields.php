@@ -144,6 +144,10 @@ class Fields {
 			return;
 		}
 
+		if ( empty( $ticket->ID ) ) {
+			return;
+		}
+
 		foreach ( $additional_fields as $field_id => $field_data ) {
 
 			// Bail if no field ID or type.
