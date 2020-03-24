@@ -191,36 +191,5 @@ if (
 			return $this->class_loader;
 		}
 
-		/**
-		 * Demonstration of getting this extension's `a_setting` option value.
-		 *
-		 * TODO: Rework or remove this.
-		 *
-		 * @return mixed
-		 */
-		public function get_one_custom_option() {
-			$settings = $this->get_settings();
-
-			return $settings->get_option( 'a_setting', 'https://theeventscalendar.com/' );
-		}
-
-		/**
-		 * Get all of this extension's options.
-		 *
-		 * @return array
-		 */
-		public function get_all_options() {
-			$settings = $this->get_settings();
-
-			return $settings->get_all_options();
-		}
-
-		/**
-		 * Include a docblock for every class method and property.
-		 */
-		public function my_custom_function() {
-			// do your custom stuff
-		}
-
 	} // end class
 } // end if class_exists check
