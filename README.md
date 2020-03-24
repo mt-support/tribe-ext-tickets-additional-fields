@@ -36,9 +36,10 @@ On a code basis, there's a template tag called `tribe_ext_tickets_additional_fie
 
 ```php
 // Replace `123` with your ticket ID.
-tribe_ext_tickets_additional_fields_get_meta( 123, 'zoom_link' )
+tribe_ext_tickets_additional_fields_get_meta( 123, 'zoom_link' );
 ```
 
 #### Supported fields
 
 * Text.
+* Textarea.
