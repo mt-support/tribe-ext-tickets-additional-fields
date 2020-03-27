@@ -97,7 +97,7 @@ function my_custom_additional_field_shortcode_printing( $html, $ticket_id, $fiel
 }
 ```
 
-#### Supported fields
+## Supported fields
 
 * `text` - Text.
 * `textarea` - Textarea.
