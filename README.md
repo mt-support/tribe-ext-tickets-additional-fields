@@ -13,12 +13,6 @@ add_filter( 'tribe_ext_tickets_additional_fields', 'custom_tickets_additional_fi
 
 function custom_tickets_additional_fields( $ticket_fields ) {
 
-		$ticket_fields['zoom_link'] = [
-			'type'        => 'url',
-			'label'       => esc_html__( 'Zoom link' ),
-			'description' => esc_html__( 'Insert the zoom link to share a link of the meeting.' ),
-		];
-
 		$ticket_fields['teacher_name'] = [
 			'type'        => 'text',
 			'label'       => esc_html__( 'Teacher name' ),
@@ -29,6 +23,12 @@ function custom_tickets_additional_fields( $ticket_fields ) {
 			'type'        => 'email',
 			'label'       => esc_html__( 'Teacher email' ),
 			'description' => esc_html__( 'Insert the email of the teacher or person hosting.' ),
+		];
+
+		$ticket_fields['zoom_link'] = [
+			'type'        => 'url',
+			'label'       => esc_html__( 'Zoom link' ),
+			'description' => esc_html__( 'Insert the zoom link to share a link of the meeting.' ),
 		];
 
 		$ticket_fields['youtube_embed'] = [
