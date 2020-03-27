@@ -74,6 +74,10 @@ function my_custom_additional_field_shortcode_printing( $html, $ticket_id, $fiel
 		$html = 'I do not want to print any zoom link!';
 	}
 
+	if ( 123 === $ticket_id ) {
+		$html = 'I do not want to print any field for the ticket 123';
+	}
+
 	return $html;
 }
 ```
