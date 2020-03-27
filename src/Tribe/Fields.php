@@ -180,6 +180,27 @@ class Fields {
 	}
 
 	/**
+	 * Return the field type
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string $meta_key The identifier of the meta key.
+	 *
+	 * @return bool|string
+	 */
+	public function get_field_type( $meta_key ) {
+		$additional_fields = $this->get_fields();
+
+		$field = Arr::get( $additional_fields, $meta_key, false );
+
+		if ( empty( $field ) ) {
+			return false;
+		}
+
+		return $field['type'];
+	}
+
+	/**
 	 * Let's check if the field meta key exists.
 	 *
 	 * @since 1.0.0

@@ -73,9 +73,63 @@ class Tribe_Tickets_Additional_Field extends \Tribe\Extensions\Tickets\Shortcode
 
 		$ticket_id = $ticket->ID;
 
-		$meta = tribe( 'tickets.additional-fields.fields' );
+		$meta       = tribe( 'tickets.additional-fields.fields' );
+		$field_type = $meta->get_field_type( $field );
 
-		return $meta->get_field_value( $ticket_id, $meta->get_field_id( $field ), true );
+		switch ( $field_type ) {
+			case 'url':
+				$html = $this->get_url_render( $ticket_id, $field );
+				break;
+			case 'email':
+				$html = $this->get_email_render( $ticket_id, $field );
+				break;
+			default:
+				$html = $meta->get_field_value( $ticket_id, $meta->get_field_id( $field ), true );
+		}
+
+		/**
+		 * Filter `tribe_tickets_additional_field_shortcode_html`.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param string $html     The HTML rendered by the shortcode.
+		 * @param int    $ticket_id The ticket ID coming from the shortcode parameter.
+		 * @param string $field     The field key coming from the shortcode parameter.
+		 */
+		$html = apply_filters( 'tribe_tickets_additional_field_shortcode_html', $html, $ticket_id, $field );
+
+		return $html;
+	}
+
+	/**
+	 * Gets the additional render, when it's URL type
+	 *
+	 * @param WP_Post|int $ticket   the post/event we're viewing.
+	 * @param string      $field_id the additional field we want to retrieve.
+	 *
+	 * @return string The resulting HTML.
+	 */
+	public function get_url_render( $ticket_id, $field ) {
+		$meta  = tribe( 'tickets.additional-fields.fields' );
+		$url = $meta->get_field_value( $ticket_id, $meta->get_field_id( $field ), true );
+
+		return '<a href="' . $url . '">' . $url . '</a>';
+	}
+
+
+	/**
+	 * Gets the additional render, when it's Email type
+	 *
+	 * @param WP_Post|int $ticket   the post/event we're viewing.
+	 * @param string      $field_id the additional field we want to retrieve.
+	 *
+	 * @return string The resulting HTML.
+	 */
+	public function get_email_render( $ticket_id, $field ) {
+		$meta  = tribe( 'tickets.additional-fields.fields' );
+		$email = $meta->get_field_value( $ticket_id, $meta->get_field_id( $field ), true );
+
+		return '<a href="mailto:' . $email . '">' . $email . '</a>';
 	}
 
 }
