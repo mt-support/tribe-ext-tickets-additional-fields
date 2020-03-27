@@ -52,7 +52,9 @@ class Hooks extends \tad_DI52_ServiceProvider {
 	 *
 	 * @since 1.0.0
 	 */
-	protected function add_filters() {}
+	protected function add_filters() {
+		add_filter( 'tribe_tickets_shortcodes', [ $this, 'filter_add_shortcode' ] );
+	}
 
 	/**
 	 * Add the additional fields to the tickets/rsvp metabox.
@@ -76,5 +78,24 @@ class Hooks extends \tad_DI52_ServiceProvider {
 	 */
 	public function action_tickets_fields_save_fields( $post_id, $ticket, $data ) {
 		$this->container->make( Fields::class )->save_fields( $post_id, $ticket, $data );
+	}
+
+	/**
+	 * Add the shortcode
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param int $post_id The ID of the post associated to the ticket.
+	 * @todo add params
+	 */
+	public function filter_add_shortcode( $shortcodes ) {
+
+		if ( ! class_exists( 'Tribe\Extensions\Tickets\Shortcodes\Shortcodes\Manager' ) ) {
+			return $shortcodes;
+		}
+
+		$shortcodes['tribe_tickets_additional_field'] = Shortcodes\Tribe_Tickets_Additional_Field::class;
+
+		return $shortcodes;
 	}
 }
