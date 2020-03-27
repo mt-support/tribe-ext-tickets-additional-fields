@@ -1,6 +1,8 @@
 <?php
 namespace Tribe\Extensions\Tickets\Additional_Fields;
 
+use Tribe__Utils__Array as Arr;
+
 /**
  * Class Fields
  *
@@ -175,5 +177,21 @@ class Fields {
 	 */
 	public function get_field_id( $meta_key ) {
 		return $this->meta_prefix . $meta_key;
+	}
+
+	/**
+	 * Let's check if the field meta key exists.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string $meta_key The identifier of the meta key.
+	 *
+	 * @return bool
+	 */
+	public function field_exist( $meta_key ) {
+		$additional_fields = $this->get_fields();
+
+		return ! empty( Arr::get( $additional_fields, $meta_key, false ) );
+
 	}
 }
