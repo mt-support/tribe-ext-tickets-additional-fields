@@ -20,7 +20,7 @@ function custom_tickets_additional_fields( $ticket_fields ) {
 		];
 
 		$ticket_fields['teacher_name'] = [
-			'type'        => 'url',
+			'type'        => 'text',
 			'label'       => esc_html__( 'Teacher name' ),
 			'description' => esc_html__( 'Insert the name of the teacher or person hosting.' ),
 		];
