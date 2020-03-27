@@ -65,6 +65,19 @@ _Where 123 is the ID of the ticket_
 
 Finally, if by any chance you want to modify the output of the shortcode you can hook into the `tribe_tickets_additional_field_shortcode_html` filter, which parameters are the `$html`, `$ticket_id` and `$field`.
 
+```php
+add_filter( 'tribe_tickets_additional_field_shortcode_html', 'my_custom_additional_field_shortcode_printing', 10, 3 );
+
+function my_custom_additional_field_shortcode_printing( $html, $ticket_id, $field ) {
+
+	if ( 'zoom_link' === $field ) {
+		$html = 'I do not want to print any zoom link!';
+	}
+
+	return $html;
+}
+```
+
 #### Supported fields
 
 * `text` - Text.
