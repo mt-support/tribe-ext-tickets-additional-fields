@@ -25,7 +25,7 @@ class Fields {
 	 */
 	private function get_fields() {
 		/**
-		 * filter `tribe_ext_tickets_additional_fields`
+		 * Filter `tribe_ext_tickets_additional_fields`
 		 *
 		 * @since 1.0.0
 		 *

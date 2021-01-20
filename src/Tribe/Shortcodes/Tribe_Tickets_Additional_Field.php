@@ -13,7 +13,7 @@ namespace Tribe\Extensions\Tickets\Additional_Fields\Shortcodes;
  * @since   1.0.0
  * @package Tribe\Extensions\Tickets\Tribe_Tickets_Additional_Field
  */
-class Tribe_Tickets_Additional_Field extends \Tribe\Extensions\Tickets\Shortcodes\Shortcodes\Shortcode_Abstract {
+class Tribe_Tickets_Additional_Field extends \Tribe\Shortcode\Shortcode_Abstract {
 
 	/**
 	 * {@inheritDoc}
@@ -66,7 +66,7 @@ class Tribe_Tickets_Additional_Field extends \Tribe\Extensions\Tickets\Shortcode
 			$ticket = get_post( $ticket );
 		}
 
-		// if password protected then do not display content
+		// if password protected then do not display content.
 		if ( post_password_required() ) {
 			return '';
 		}
