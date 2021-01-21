@@ -53,7 +53,7 @@ class Hooks extends \tad_DI52_ServiceProvider {
 	 * @since 1.0.0
 	 */
 	protected function add_filters() {
-		add_filter( 'tribe_tickets_shortcodes', [ $this, 'filter_add_shortcode' ] );
+		add_filter( 'tribe_shortcodes', [ $this, 'filter_add_shortcode' ] );
 	}
 
 	/**
@@ -85,12 +85,12 @@ class Hooks extends \tad_DI52_ServiceProvider {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param int $post_id The ID of the post associated to the ticket.
+	 * @param array $shortcodes The array containing the shortcodes.
 	 * @todo add params
 	 */
 	public function filter_add_shortcode( $shortcodes ) {
 
-		if ( ! class_exists( 'Tribe\Extensions\Tickets\Shortcodes\Shortcodes\Manager' ) ) {
+		if ( ! class_exists( 'Tribe\Shortcode\Manager' ) ) {
 			return $shortcodes;
 		}
 

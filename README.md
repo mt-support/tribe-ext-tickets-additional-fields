@@ -1,6 +1,6 @@
 ## What and Why?
 
-This is an extension to add additional fields for Tickets and RSVPs. Event Tickets is required.
+This is an extension to add additional fields for Tickets and RSVPs. Event Tickets and Event Tickets Plus are required.
 
 ## How?
 
@@ -66,7 +66,7 @@ tribe_ext_tickets_additional_fields_get_meta( 123, 'zoom_link' );
 
 ### Using the Shortcode
 
-As mentioned above. For this to work you'll need the [Event Tickets Shortcodes Extension](https://theeventscalendar.com/extensions/event-tickets-shortcodes/) installed and active on your site.
+As mentioned above. For this to work you'll need [Event Tickets Plus](https://theeventscalendar.com/products/wordpress-event-tickets/) installed and active on your site.
 
 The shortcode has two required parameters, the `ticket_id` and the `field`. The `ticket_id` parameter is the ID of the ticket (post or page. The `field` parameter is the ID you use when defining the field. In the previous example: `zoom_link`, `teacher_name`, `teacher_email` and `youtube_embed`.
 

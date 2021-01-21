@@ -10,6 +10,7 @@ namespace Tribe\Extensions\Tickets\Additional_Fields;
 
 /**
  * Class Service_Provider
+ *
  * @since   1.0.0
  * @package Tribe\Extensions\Tickets\Additional_Fields
  */
@@ -27,7 +28,7 @@ class Service_Provider extends \tad_DI52_ServiceProvider {
 
 		$this->register_hooks();
 
-		// Register the SP on the container
+		// Register the SP on the container.
 		$this->container->singleton( 'tickets.additional-fields', $this );
 		$this->container->singleton( static::class, $this );
 	}
