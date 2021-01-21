@@ -66,7 +66,7 @@ class Tribe_Tickets_Additional_Field extends \Tribe\Shortcode\Shortcode_Abstract
 			$ticket = get_post( $ticket );
 		}
 
-		// if password protected then do not display content.
+		// If password protected then do not display content.
 		if ( post_password_required() ) {
 			return '';
 		}
