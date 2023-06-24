@@ -4,7 +4,7 @@
  * Plugin URI:        https://theeventscalendar.com/extensions/---the-extension-article-url---/
  * GitHub Plugin URI: https://github.com/mt-support/tribe-ext-tickets-additional-fields
  * Description:       This extension allows you to add additional fields to tickets in the classic editor.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Extension Class:   Tribe\Extensions\Tickets\Additional_Fields\Main
  * Author:            The Events Calendar
  * Author URI:        http://m.tri.be/1971
@@ -51,7 +51,7 @@ if (
 	 * Extension main class, class begins loading on init() function.
 	 */
 	class Main extends Tribe__Extension {
-		const VERSION = '1.0.1';
+		const VERSION = '1.0.2';
 
 		const PATH = __DIR__;
 
@@ -94,8 +94,8 @@ if (
 			 *
 			 * If using `tribe()`, such as with `Tribe__Dependency`, require TEC/ET version 4.4+ (January 9, 2017).
 			 */
-			$this->add_required_plugin( 'Tribe__Tickets__Main', '5.0.5' );
-			$this->add_required_plugin( 'Tribe__Tickets_Plus__Main', '5.1.2' );
+			$this->add_required_plugin( 'Tribe__Tickets__Main', '5.6.1.2' );
+			$this->add_required_plugin( 'Tribe__Tickets_Plus__Main', '5.7.1' );
 
 		}
 

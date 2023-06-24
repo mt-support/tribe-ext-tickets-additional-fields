@@ -17,6 +17,8 @@
 
 namespace Tribe\Extensions\Tickets\Additional_Fields;
 
+use TEC\Common\Contracts\Service_Provider;
+
 /**
  * Class Hooks
  *
@@ -24,7 +26,7 @@ namespace Tribe\Extensions\Tickets\Additional_Fields;
  *
  * @package Tribe\Extensions\Tickets\Additional_Fields
  */
-class Hooks extends \tad_DI52_ServiceProvider {
+class Hooks extends Service_Provider {
 
 	/**
 	 * Binds and sets up implementations.
