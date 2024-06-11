@@ -37,6 +37,18 @@ function custom_tickets_additional_fields( $ticket_fields ) {
 			'description' => esc_html__( 'Insert the youtube embed of the video they have access to when they purchase the ticket.' ),
 		];
 
+		$ticket_fields['teacher_id'] = [
+			'type'        => 'number',
+			'label'       => esc_html__( 'Teacher ID' ),
+			'description' => esc_html__( 'Insert the Teacher ID number.' ),
+		];
+
+		$ticket_fields['is_mandatory'] = [
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Is mandatory' ),
+			'description' => esc_html__( 'Check box if attendance is mandatory' ),
+		];
+
 		return $ticket_fields;
 }
 
@@ -70,7 +82,7 @@ As mentioned above. For this to work you'll need [Event Tickets Plus](https://th
 
 The shortcode has two required parameters, the `ticket_id` and the `field`. The `ticket_id` parameter is the ID of the ticket (post or page. The `field` parameter is the ID you use when defining the field. In the previous example: `zoom_link`, `teacher_name`, `teacher_email` and `youtube_embed`.
 
-*Example usage:*
+_Example usage:_
 
 ```
 [tribe_tickets_additional_field ticket_id="123" field="zoom_link"]
@@ -99,7 +111,9 @@ function my_custom_additional_field_shortcode_printing( $html, $ticket_id, $fiel
 
 ## Supported fields
 
-* `text` - Text.
-* `textarea` - Textarea.
-* `url` - URL (when being printed for the shortcode will add the HTML for the link).
-* `email` - Email (when being printed for the shortcode will add the HTML for the email link).
+-   `text` - Text.
+-   `textarea` - Textarea.
+-   `url` - URL (when being printed for the shortcode will add the HTML for the link).
+-   `email` - Email (when being printed for the shortcode will add the HTML for the email link).
+-   `number` - Number.
+-   `checkbox` - Checkbox.
