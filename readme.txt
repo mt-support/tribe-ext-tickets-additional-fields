@@ -49,6 +49,6 @@ We're always interested in your feedback and our [Help Desk](https://support.the
 
 * Fix: Make the shortcode work with Event Tickets Plus now that the shortcodes live there.
 
-= [1.0.0] YYYY-MM-DD =
+= [1.0.0] 2020-03-27 =
 
-* Initial release
+* Initial release. (Props to juanfra.)

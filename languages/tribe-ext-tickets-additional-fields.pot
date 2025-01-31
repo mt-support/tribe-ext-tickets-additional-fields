@@ -1,0 +1,45 @@
+# Copyright (C) 2025 The Events Calendar
+# This file is distributed under the GPL version 3 or any later version.
+msgid ""
+msgstr ""
+"Project-Id-Version: Event Tickets Extension: Additional Fields 1.1.0\n"
+"Report-Msgid-Bugs-To: The Events Calendar <https://support.theeventscalendar.com/>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-31T09:56:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: tribe-ext-tickets-additional-fields\n"
+
+#. Plugin Name of the plugin
+#: tribe-ext-tickets-additional-fields.php
+msgid "Event Tickets Extension: Additional Fields"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: tribe-ext-tickets-additional-fields.php
+msgid "https://theeventscalendar.com/extensions/additional-fields-for-tickets/"
+msgstr ""
+
+#. Description of the plugin
+#: tribe-ext-tickets-additional-fields.php
+msgid "This extension allows you to add additional fields to tickets in the classic editor."
+msgstr ""
+
+#. Author of the plugin
+#: tribe-ext-tickets-additional-fields.php
+msgid "The Events Calendar"
+msgstr ""
+
+#. Author URI of the plugin
+#: tribe-ext-tickets-additional-fields.php
+msgid "https://evnt.is/1971"
+msgstr ""
+
+#: src/Tribe/Fields.php:51
+#: src/Tribe/Fields.php:57
+msgid "Additional Fields"
+msgstr ""
