@@ -133,6 +133,7 @@ class Fields {
 	 * Intercept the ticket save and save the additional fields.
 	 *
 	 * @since 1.0.0
+	 * @since 1.1.0 Add support for checkbox and number fields.
 	 *
 	 * @param int    $post_id The post ID.
 	 * @param object $ticket The ticket.
