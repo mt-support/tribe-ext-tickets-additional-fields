@@ -162,6 +162,16 @@ class Fields {
 
 			$field_id = $this->get_field_id( $field_id );
 
+			// Handle number fields
+			if ( $field_data['type'] === 'number' ) {
+				$data[ $field_id ] = isset( $data[ $field_id ] ) ? floatval( $data[ $field_id ] ) : 0;
+			}
+
+			// Handle checkbox fields
+			if ( $field_data['type'] === 'checkbox' ) {
+				$data[ $field_id ] = isset( $data[ $field_id ] ) ? '1' : '0';
+			}
+
 			update_post_meta( $ticket->ID, $field_id, $data[ $field_id ] );
 		}
 	}
