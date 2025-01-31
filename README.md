@@ -24,6 +24,18 @@ function custom_tickets_additional_fields( $ticket_fields ) {
 			'label'       => esc_html__( 'Teacher email' ),
 			'description' => esc_html__( 'Insert the email of the teacher or person hosting.' ),
 		];
+		
+		$ticket_fields['teacher_id'] = [
+			'type'        => 'number',
+			'label'       => esc_html__( 'Teacher ID' ),
+			'description' => esc_html__( 'Insert the Teacher ID number.' ),
+		];
+
+		$ticket_fields['is_mandatory'] = [
+			'type'        => 'checkbox',
+			'label'       => esc_html__( 'Is mandatory' ),
+			'description' => esc_html__( 'Check box if attendance is mandatory' ),
+		];
 
 		$ticket_fields['zoom_link'] = [
 			'type'        => 'url',
@@ -103,3 +115,5 @@ function my_custom_additional_field_shortcode_printing( $html, $ticket_id, $fiel
 * `textarea` - Textarea.
 * `url` - URL (when being printed for the shortcode will add the HTML for the link).
 * `email` - Email (when being printed for the shortcode will add the HTML for the email link).
+* `number` - Number.
+* `checkbox` - Checkbox.

@@ -1,11 +1,11 @@
 === Event Tickets Extension: Additional Fields ===
 Contributors: The Events Calendar
-Donate link: http://m.tri.be/29
+Donate link: https://evnt.is/29
 Tags: events, calendar
 Requires at least: 4.5
-Tested up to: 5.3.2
-Requires PHP: 5.6
-Stable tag: 1.0.2
+Tested up to: 6.7.1
+Requires PHP: 7.4
+Stable tag: 1.1.0
 License: GPL version 3 or any later version
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -37,6 +37,10 @@ We're always interested in your feedback and our [Help Desk](https://support.the
 
 == Changelog ==
 
+= [1.1.0] 2025-01-31 =
+
+* Feature - Add support for checkbox and number fields. (Props to harryf98.)
+
 = [1.0.2] 2023-06-24 =
 
 * Fix - Update to use the new Service_Provider contract in common.
@@ -45,6 +49,6 @@ We're always interested in your feedback and our [Help Desk](https://support.the
 
 * Fix: Make the shortcode work with Event Tickets Plus now that the shortcodes live there.
 
-= [1.0.0] YYYY-MM-DD =
+= [1.0.0] 2020-03-27 =
 
-* Initial release
+* Initial release. (Props to juanfra.)

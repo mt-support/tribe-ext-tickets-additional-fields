@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:       Event Tickets Extension: Additional Fields
- * Plugin URI:        https://theeventscalendar.com/extensions/---the-extension-article-url---/
+ * Plugin URI:        https://theeventscalendar.com/extensions/additional-fields-for-tickets/
  * GitHub Plugin URI: https://github.com/mt-support/tribe-ext-tickets-additional-fields
  * Description:       This extension allows you to add additional fields to tickets in the classic editor.
- * Version:           1.0.2
+ * Version:           1.1.0
  * Extension Class:   Tribe\Extensions\Tickets\Additional_Fields\Main
  * Author:            The Events Calendar
- * Author URI:        http://m.tri.be/1971
+ * Author URI:        https://evnt.is/1971
  * License:           GPL version 3 or any later version
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       tribe-ext-tickets-additional-fields
@@ -51,7 +51,7 @@ if (
 	 * Extension main class, class begins loading on init() function.
 	 */
 	class Main extends Tribe__Extension {
-		const VERSION = '1.0.2';
+		const VERSION = '1.1.0';
 
 		const PATH = __DIR__;
 
@@ -146,7 +146,7 @@ if (
 		 * @return bool
 		 */
 		private function php_version_check() {
-			$php_required_version = '5.6';
+			$php_required_version = '7.4';
 
 			if ( version_compare( PHP_VERSION, $php_required_version, '<' ) ) {
 				if (
