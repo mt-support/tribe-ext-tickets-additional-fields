@@ -1,11 +1,11 @@
 === Event Tickets Extension: Additional Fields ===
 Contributors: The Events Calendar
-Donate link: http://m.tri.be/29
+Donate link: https://evnt.is/29
 Tags: events, calendar
 Requires at least: 4.5
-Tested up to: 5.3.2
-Requires PHP: 5.6
-Stable tag: 1.0.2
+Tested up to: 6.7.1
+Requires PHP: 7.4
+Stable tag: 1.1.0
 License: GPL version 3 or any later version
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -36,6 +36,10 @@ Please visit our [extension library](https://theeventscalendar.com/extensions/) 
 We're always interested in your feedback and our [Help Desk](https://support.theeventscalendar.com/) are the best place to flag any issues. Do note, however, that the degree of support we provide for extensions like this one tends to be very limited.
 
 == Changelog ==
+
+= [1.1.0] 2025-01-31 =
+
+* Feature - Add support for checkbox and number fields. (Props to harryf98.)
 
 = [1.0.2] 2023-06-24 =
 
